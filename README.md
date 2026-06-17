@@ -1,4 +1,4 @@
-# 🌾 Agrinho 2025 - Festejando a Conexão Campo-Cidade
+# 🌾 Agrinho 2026 - Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente
 
 **Projeto desenvolvido por:** Gustavo Lima Lopes  
 **Série:** 3º ano do Ensino Médio  
