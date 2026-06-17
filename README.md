@@ -1,18 +1,18 @@
 # 🌾 Agrinho 2025 - Festejando a Conexão Campo-Cidade
 
 **Projeto desenvolvido por:** Gustavo Lima Lopes  
-**Série:** 2º ano do Ensino Médio  
+**Série:** 3º ano do Ensino Médio  
 **Categoria:** Programação - Subcategoria 4 (HTML e CSS)  
 **Instituição:** Colégio estadual Ricardo Lunardelli
 **NRE:** Londrina  
-**Professor orientador:** Gabrieli Rizzi 
+**Professor orientador:** Maikon Murro
 
 ---
 
 ## 🎯 Tema
-Este site foi criado para o Concurso Agrinho 2025, com o tema **"Festejando a conexão campo-cidade"**, promovido pelo SENAR-PR e pela SEED-PR.
+Este site foi criado para o Concurso Agrinho 2026, com o tema **"Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"**, promovido pelo SENAR-PR e pela SEED-PR.
 
-A proposta é destacar a importância da interação entre o campo e a cidade para o desenvolvimento sustentável, cultural e econômico do Brasil. O site contém materiais informativos, visuais, interativos e educativos com foco na valorização dessa conexão.
+A proposta é destacar a importância do equilíbrio entre a produção agrícola e a preservação ambiental para construir um futuro sustentável e economicamente forte no Brasil. O site contém materiais informativos, visuais, interativos e educativos com foco na valorização de práticas agropecuárias responsáveis e na conservação da natureza.
 
 ---
 
@@ -49,7 +49,7 @@ O repositório contém a tag oficial `agrinho` conforme exigido no regulamento.
 
 ### Imagens e Vídeos
 - Imagens reais e tirinhas elaboradas especialmente para o concurso, com auxílio de IA e edição autoral. Prompt geral: representação da relação campo e cidade em imagens de pessoas e paisagens
-- Vídeos do youtube editados exclusivamente para o projeto, respeitando a temática proposta. https://www.youtube.com/watch?v=n8RcQM5MIr8
+- Vídeos do youtube editados exclusivamente para o projeto, respeitando a temática proposta. https://youtu.be/8dIgTNJPUcc?si=OalhCSROEqt6yFZr
 
 ---
 
@@ -66,7 +66,7 @@ O projeto contempla:
 ---
 
 ## 📅 Prazo de Submissão
-Este projeto foi finalizado e publicado **antes de 22/06/2025**, em conformidade com o prazo final de submissão estipulado pelo concurso.
+Este projeto foi finalizado e publicado **antes de 01/07/2026**, em conformidade com o prazo final de submissão estipulado pelo concurso.
 
 ---
 
