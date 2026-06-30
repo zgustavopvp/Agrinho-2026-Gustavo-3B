@@ -4,187 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro Forte, Futuro Sustentável</title>
-    <style>
-        /* Estilos Gerais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f4f7f5;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Cabeçalho */
-        header {
-            background-color: #2e5a44;
-            color: #ffffff;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .header-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        header h1 {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #a3cc5a;
-        }
-
-        /* Banner Principal */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-        }
-
-        /* Conteúdo Principal */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            color: #2e5a44;
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
-
-        /* Grid de Pilares */
-        .grid-pilares {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 5px solid #2e5a44;
-        }
-
-        .card h3 {
-            color: #2e5a44;
-            margin-bottom: 15px;
-        }
-
-        /* Bloco de Destaque (Equilíbrio) */
-        .equilibrio-box {
-            background-color: #e8f0ec;
-            border-left: 6px solid #a3cc5a;
-            padding: 30px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 50px;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: #1e3a2b;
-            color: #a3cc5a;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <div class="header-container">
-            <h1>AgroSustentável</h1>
+        <div class="container navbar">
+            <div class="logo">Agro<span>Sustentável</span></div>
             <nav>
-                <a href="#inicio">Início</a>
-                <a href="#pilares">Pilares</a>
-                <a href="#equilibrio">O Equilíbrio</a>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#cooperativas">Cooperativas</a></li>
+                    <li><a href="#futuro">O Futuro</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" id="inicio">
-        <h2>Agro Forte, Futuro Sustentável</h2>
-        <p>Unindo a força da produção no campo com a preservação do meio ambiente para alimentar o amanhã.</p>
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>O equilíbrio perfeito entre a alta produtividade e a preservação do meio ambiente.</p>
+            <a href="#pilares" class="btn">Descubra Como</a>
+        </div>
     </section>
 
-    <main class="container">
+    <section id="pilares" class="container section">
+        <h2 class="section-title">Como o Agro se torna mais forte?</h2>
+        <p class="section-subtitle">A força do campo hoje depende da inteligência aplicada ao amanhã.</p>
         
-        <section id="pilares">
-            <h2 class="section-title">Nossos Pilares de Produção</h2>
-            <div class="grid-pilares">
-                <div class="card">
-                    <h3>Tecnologia no Campo</h3>
-                    <p>O uso de agricultura de precisão, drones e inteligência artificial otimiza o uso de recursos, evitando desperdícios de água e insumos.</p>
-                </div>
-                <div class="card">
-                    <h3>Preservação Ativa</h3>
-                    <p>Práticas como o plantio direto, rotação de culturas e a conservação de áreas de preservação permanente mantêm o solo rico e protegido.</p>
-                </div>
-                <div class="card">
-                    <h3>Energia Limpa</h3>
-                    <p>A integração de painéis solares e o uso de biomassa nas propriedades reduzem a pegada de carbono de toda a cadeia produtiva.</p>
-                </div>
+        <div class="grid-cards">
+            <div class="card">
+                <div class="card-icon">🌱</div>
+                <h3>Tecnologia Verde</h3>
+                <p>Uso de bioinsumos, drones e sensores para reduzir o impacto ambiental e otimizar recursos.</p>
             </div>
-        </section>
+            <div class="card">
+                <div class="card-icon">💧</div>
+                <h3>Manejo Consciente</h3>
+                <p>Irrigação de precisão e plantio direto que conservam a água e protegem a saúde do solo.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔄</div>
+                <h3>Economia Circular</h3>
+                <p>Transformação de resíduos orgânicos em bioenergia e adubo, zerando o desperdício.</p>
+            </div>
+        </div>
+    </section>
 
-        <hr style="border: 0; height: 1px; background: #ddd; margin: 40px 0;">
+    <section id="cooperativas" class="bg-light">
+        <div class="container section split-section">
+            <div class="split-text">
+                <h2>A Força das Cooperativas</h2>
+                <p>Ninguém cresce sozinho. As cooperativas agrícolas são o motor que impulsiona o pequeno e o médio produtor, unindo forças para conectar o campo ao mercado global.</p>
+                <blockquote>"União que gera escala, divide riscos e multiplica resultados sustentáveis."</blockquote>
+                <p>Elas garantem acesso a tecnologias de ponta, assistência técnica qualificada e promovem práticas de comércio justo que respeitam as comunidades locais.</p>
+            </div>
+            <div class="split-image">
+                <div class="agro-badge">🤝 Agro Unido</div>
+            </div>
+        </div>
+    </section>
 
-        <section id="equilibrio" class="equilibrio-box">
-            <h2 style="color: #2e5a44; margin-bottom: 15px;">O Equilíbrio Necessário</h2>
-            <p>Produzir alimentos em larga escala e proteger a biodiversidade não são caminhos opostos. O verdadeiro progresso do agronegócio está na capacidade de regenerar o ecossistema enquanto se garante a segurança alimentar do planeta. Um agro forte é, essencialmente, um agro sustentável.</p>
-        </section>
-
-    </main>
+    <section id="futuro" class="cta-section">
+        <div class="container">
+            <h2>Pronto para semear essa ideia?</h2>
+            <p>O equilíbrio entre produção e meio ambiente não é uma escolha, é o único caminho para a segurança alimentar do planeta.</p>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 AgroSustentável - Todos os direitos reservados.</p>
+        <div class="container footer-content">
+            <p>&copy; 2026 AgroSustentável. Cultivando um amanhã melhor.</p>
+        </div>
     </footer>
 
 </body>
