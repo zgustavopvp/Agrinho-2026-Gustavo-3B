@@ -18,6 +18,7 @@
                 <ul class="nav-links">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#conexoes">Conexões</a></li>
                     <li><a href="#cooperativas">Cooperativas</a></li>
                     <li><a href="#quiz">Desafio</a></li>
                 </ul>
@@ -28,7 +29,7 @@
     <section id="inicio" class="hero">
         <div class="container hero-content">
             <h1>Agro Forte, Futuro Sustentável</h1>
-            <p>O equilíbrio perfeito entre a alta produtividade e a preservação do meio ambiente.</p>
+            <p>Como garantir a segurança alimentar do planeta protegendo nossos recursos naturais? Conheça as práticas que unem alta produtividade, tecnologia e preservação ambiental.</p>
             <a href="#pilares" class="btn">Descubra Como</a>
         </div>
     </section>
@@ -42,7 +43,7 @@
             <div class="flashcard">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
-                        <div class="card-icon">🌱</div>
+                        <div class="card-icon" aria-hidden="true">🌱</div>
                         <h3>Tecnologia Verde</h3>
                         <span class="hint">Ver mais ➔</span>
                     </div>
@@ -56,7 +57,7 @@
             <div class="flashcard">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
-                        <div class="card-icon">💧</div>
+                        <div class="card-icon" aria-hidden="true">💧</div>
                         <h3>Manejo Consciente</h3>
                         <span class="hint">Ver mais ➔</span>
                     </div>
@@ -70,7 +71,7 @@
             <div class="flashcard">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
-                        <div class="card-icon">🔄</div>
+                        <div class="card-icon" aria-hidden="true">🔄</div>
                         <h3>Economia Circular</h3>
                         <span class="hint">Ver mais ➔</span>
                     </div>
@@ -84,11 +85,32 @@
         </div>
     </section>
 
+    <section id="conexoes" class="container section">
+        <h2 class="section-title">O Agro está em tudo!</h2>
+        <p class="section-subtitle">Clique nos botões abaixo para descobrir a ligação secreta do agro com o seu dia a dia.</p>
+        
+        <div class="botoes-conexoes">
+            <button class="btn-interativo" onclick="mostrarConexao('futebol', '⚽ Agro no Futebol: A grama perfeita dos estádios depende da tecnologia de manejo do solo. Além disso, a bola oficial e as chuteiras de couro ou materiais sintéticos biodegradáveis derivam da agropecuária e da biotecnologia vegetal!')">
+                ⚽ Futebol
+            </button>
+            <button class="btn-interativo" onclick="mostrarConexao('roupa', '👕 Agro na Moda: Aquela sua camiseta favorita de algodão só existe graças à agricultura! Hoje, o Brasil é referência em algodão sustentável, cultivado com água da chuva e menos defensivos.')">
+                👕 Suas Roupas
+            </button>
+            <button class="btn-interativo" onclick="mostrarConexao('celular', '📱 Agro no Celular: Sabia que o biodiesel que move a energia das fábricas e até componentes plásticos biodegradáveis feitos de amido de milho ou cana estão presentes na cadeia de produção dos eletrônicos?')">
+                📱 Tecnologia
+            </button>
+        </div>
+
+        <div id="caixa-mensagem" class="caixa-mensagem-oculta">
+            <p id="texto-conexao"></p>
+        </div>
+    </section>
+
     <section id="cooperativas" class="bg-light">
         <div class="container section split-section">
             <div class="split-text">
                 <h2>A Força das Cooperativas</h2>
-                <p>Ninguém cresce sozinho. As cooperativas agrícolas são o motor que impulsiona o pequeno e o médio produtor, unindo forças para conectar o campo ao mercado global.</p>
+                <p>Ninguém cresce sozinho. As cooperativas agrícolas são o motor que impulsiona o pequeno e o médio produtor, unindo forças para conectar o campo ao mercado global através de práticas sustentáveis que preservam o solo e a água.</p>
                 <blockquote>"União que gera escala, divide riscos e multiplica resultados sustentáveis."</blockquote>
                 <p>Elas garantem acesso a tecnologias de ponta, assistência técnica qualificada e promovem práticas de comércio justo que respeitam as comunidades locais.</p>
             </div>
@@ -101,43 +123,24 @@
     <section id="quiz" class="quiz-section">
         <div class="container">
             <h2 class="section-title text-white">Desafio do Agro Sustentável</h2>
-            <p class="section-subtitle text-white">Será que você conhece a força do campo? Teste seus conhecimentos abaixo!</p>
+            <p class="section-subtitle text-white">Teste seus conhecimentos! Responda as perguntas e acumule pontos.</p>
             
             <div class="quiz-container">
-                <div class="quiz-card">
-                    <h3>Pergunta 1: É possível aumentar a produção de alimentos e proteger o meio ambiente ao mesmo tempo?</h3>
-                    <div class="quiz-options">
-                        <label class="quiz-btn correct-trigger">
-                            <input type="radio" name="q1" class="hidden-radio"> Verdadeiro
-                        </label>
-                        <label class="quiz-btn wrong-trigger">
-                            <input type="radio" name="q1" class="hidden-radio"> Falso
-                        </label>
-                    </div>
-                    <div class="quiz-feedback correct-feedback">
-                        🎉 <strong>Acertou!</strong> Com tecnologia, rotação de culturas e agricultura de precisão, produzimos mais usando menos recursos ambientais.
-                    </div>
-                    <div class="quiz-feedback wrong-feedback">
-                        ❌ <strong>Incorreto...</strong> É totalmente possível através do manejo sustentável e da tecnologia verde!
-                    </div>
+                <div class="quiz-score-board">
+                    <span>Pergunta: <strong id="current-question-num">1/10</strong></span>
+                    <span>Pontos: <strong id="score-display">0</strong></span>
                 </div>
 
-                <div class="quiz-card">
-                    <h3>Pergunta 2: As cooperativas agrícolas servem apenas para grandes proprietários de terra?</h3>
-                    <div class="quiz-options">
-                        <label class="quiz-btn wrong-trigger">
-                            <input type="radio" name="q2" class="hidden-radio"> Verdadeiro
-                        </label>
-                        <label class="quiz-btn correct-trigger">
-                            <input type="radio" name="q2" class="hidden-radio"> Falso
-                        </label>
-                    </div>
-                    <div class="quiz-feedback correct-feedback">
-                        🎉 <strong>Exato!</strong> As cooperativas são fundamentais principalmente para os pequenos e médios produtores ganharem força de mercado.
-                    </div>
-                    <div class="quiz-feedback wrong-feedback">
-                        ❌ <strong>Errado.</strong> Na verdade, elas unem os pequenos e médios produtores para que juntos tenham a força de um grande mercado.
-                    </div>
+                <div class="quiz-card" id="quiz-box">
+                    <h3 id="quiz-question-text">Carregando pergunta...</h3>
+                    
+                    <div class="quiz-options" id="quiz-options-container">
+                        </div>
+                    
+                    <div class="quiz-feedback" id="quiz-feedback-box">
+                        </div>
+
+                    <button id="next-btn" class="btn" style="display: none; margin: 20px auto 0 auto;">Próxima Pergunta ➔</button>
                 </div>
             </div>
         </div>
@@ -145,7 +148,7 @@
 
     <section class="cta-section">
         <div class="container">
-            <h2>Pronto para semear essa ideia?</h2>
+            <h2>Pronto para semear essa idea?</h2>
             <p>O equilíbrio entre produção e meio ambiente não é uma escolha, é o único caminho para a segurança alimentar do planeta.</p>
         </div>
     </section>
@@ -156,5 +159,172 @@
         </div>
     </footer>
 
+    <script>
+        function mostrarConexao(tipo, mensagem) {
+            const caixa = document.getElementById('caixa-mensagem');
+            const texto = document.getElementById('texto-conexao');
+            texto.innerHTML = mensagem;
+            caixa.className = "caixa-mensagem-oculta caixa-mensagem-visivel";
+        }
+
+        // LISTA ATUALIZADA COM EXATAMENTE 10 PERGUNTAS
+        const quizData = [
+            {
+                question: "1. É possível aumentar a produção de alimentos e proteger o meio ambiente ao mesmo tempo?",
+                options: ["Verdadeiro", "Falso"],
+                correct: 0,
+                feedbackCorrect: "🎉 Perfeito! Com tecnologia, rotação de culturas e agricultura de precisão, produzimos mais usando menos recursos.",
+                feedbackWrong: "❌ Incorreto... É totalmente possível através do manejo sustentável e da tecnologia verde!"
+            },
+            {
+                question: "2. As cooperativas agrícolas servem apenas para grandes proprietários de terra?",
+                options: ["Verdadeiro", "Falso"],
+                correct: 1,
+                feedbackCorrect: "🎉 Exato! Elas unem pequenos e médios produtores para que juntos ganhem competitividade no mercado.",
+                feedbackWrong: "❌ Errado. Elas são essenciais justamente para dar força de mercado aos pequenos produtores."
+            },
+            {
+                question: "3. O que é a agricultura de precisão no ecossistema do agro sustentável?",
+                options: ["Usar o mesmo tanto de água em toda plantação", "Uso de dados, satélites e drones para aplicar recursos no local exato", "Plantar apenas um tipo de semente no ano todo"],
+                correct: 1,
+                feedbackCorrect: "🎉 Correto! Ela evita desperdícios aplicando água ou insumos apenas onde a planta realmente precisa.",
+                feedbackWrong: "❌ Errado. A agricultura de precisão usa mapas e tecnologia para dosar os recursos perfeitamente."
+            },
+            {
+                question: "4. Qual é a principal vantagem da rotação de culturas para o solo?",
+                options: ["Deixar o solo descansar sem plantar nada", "Evitar o desgaste de nutrientes e quebrar o ciclo de pragas de forma natural", "Apenas estética visual das propriedades"],
+                correct: 1,
+                feedbackCorrect: "🎉 Isso aí! Alternar as plantas mantém o solo rico e reduz drasticamente a necessidade de químicos adicionais.",
+                feedbackWrong: "❌ Incorreto. A rotação serve para renovar os nutrientes da terra naturalmente."
+            },
+            {
+                question: "5. Qual é o principal objetivo do Plano ABC (Agricultura de Baixo Carbono)?",
+                options: ["Reduzir custos reduzindo o salário dos trabalhadores do campo", "Reduzir a emissão de gases de efeito estufa no agro através de técnicas sustentáveis", "Substituir todas as máquinas de combustão por tração animal"],
+                correct: 1,
+                feedbackCorrect: "🎉 Certinho! O Plano ABC incentiva tecnologias que sequestram e fixam o carbono diretamente no solo.",
+                feedbackWrong: "❌ Incorreto... O foco é reduzir os gases poluentes aplicando biotecnologia e manejo correto."
+            },
+            {
+                question: "6. O que são 'bioinsumos' na agricultura moderna?",
+                options: ["Defensivos químicos super concentrados de alta toxicidade", "Produtos de origem vegetal, animal ou microbiana usados para nutrir ou proteger as plantas naturalmente", "Sensores digitais instalados nas raízes"],
+                correct: 1,
+                feedbackCorrect: "🎉 Isso mesmo! Eles diminuem o uso de químicos agressivos, protegendo a saúde da terra e da água.",
+                feedbackWrong: "❌ Errado. Os bioinsumos são soluções biológicas e naturais, não compostos químicos pesados."
+            },
+            {
+                question: "7. O que significa o conceito de Integração Lavoura-Pecuária-Floresta (ILPF)?",
+                options: ["Isolar completamente as matas nativas das plantações", "Produzir grãos, carne e madeira na mesma área de forma rotativa e integrada", "Substituir pastos por florestas de árvores artificiais"],
+                correct: 1,
+                feedbackCorrect: "🎉 Incrível! A ILPF é super sustentável porque otimiza o espaço, melhora a renda e regenera pastagens degradadas.",
+                feedbackWrong: "❌ Errado. A ILPF combina propositalmente plantio, criação de animais e árvores no mesmo espaço."
+            },
+            {
+                question: "8. Qual a importância das Áreas de Preservação Permanente (APPs) nas fazendas?",
+                options: ["Elas protegem recursos hídricos (rios e nascentes) e mantêm a biodiversidade local viva", "Servem apenas para enfeitar a entrada das propriedades", "Diminuem o lucro do produtor e não trazem benefícios"],
+                correct: 0,
+                feedbackCorrect: "🎉 Perfeito! Sem a proteção hídrica e os animais polinizadores das APPs, a produtividade do campo cairia drasticamente.",
+                feedbackWrong: "❌ Incorreto. Elas são essenciais para proteger a água e o equilíbrio biológico de toda a região."
+            },
+            {
+                question: "9. De que forma as abelhas e polinizadores se relacionam com o Agro Forte?",
+                options: ["Eles causam danos às folhas e devem ser eliminados", "São essenciais na polinização de várias culturas, gerando frutos melhores e sementes fortes", "Eles ajudam apenas na produção de mel, sem afetar outras plantas"],
+                correct: 1,
+                feedbackCorrect: "🎉 Certíssimo! Proteger polinizadores com o uso consciente de recursos é vital para a preservação e para a colheita.",
+                feedbackWrong: "❌ Errado. A maior parte das plantas que consumimos depende diretamente do trabalho das abelhas."
+            },
+            {
+                question: "10. O que caracteriza a 'Economia Circular' aplicada ao agronegócio?",
+                options: ["Plantar apenas lavouras em formatos geométricos circulares", "Reaproveitar integralmente os resíduos (como transformar esterco em biogás e adubo), eliminando desperdícios", "Vender mercadorias apenas em feiras locais fechadas"],
+                correct: 1,
+                feedbackCorrect: "🎉 Excelente! O que antes era tratado como descarte vira energia limpa e adubo rico, fechando um ciclo perfeito.",
+                feedbackWrong: "❌ Incorreto. Economia Circular se refere ao reaproveitamento inteligente de resíduos produtivos."
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const audioCorrect = new Audio('https://assets.mixkit.co/active_storage/sfx/2019/2019-84.wav');
+        const audioWrong = new Audio('https://assets.mixkit.co/active_storage/sfx/2018/2018-84.wav');
+        
+        audioCorrect.volume = 0.3;
+        audioWrong.volume = 0.3;
+
+        const questionTextElement = document.getElementById('quiz-question-text');
+        const optionsContainer = document.getElementById('quiz-options-container');
+        const feedbackBox = document.getElementById('quiz-feedback-box');
+        const nextButton = document.getElementById('next-btn');
+        const currentQuestionNumElement = document.getElementById('current-question-num');
+        const scoreDisplayElement = document.getElementById('score-display');
+
+        function loadQuestion() {
+            feedbackBox.style.display = "none";
+            nextButton.style.display = "none";
+            optionsContainer.innerHTML = "";
+            
+            if (currentQuestionIndex < quizData.length) {
+                const currentQuiz = quizData[currentQuestionIndex];
+                currentQuestionNumElement.innerText = `${currentQuestionIndex + 1}/${quizData.length}`;
+                questionTextElement.innerText = currentQuiz.question;
+
+                currentQuiz.options.forEach((option, index) => {
+                    const button = document.createElement('button');
+                    button.innerText = option;
+                    button.classList.add('quiz-btn');
+                    button.addEventListener('click', () => checkAnswer(index));
+                    optionsContainer.appendChild(button);
+                });
+            } else {
+                currentQuestionNumElement.innerText = "Fim!";
+                questionTextElement.innerText = `Você concluiu o desafio!`;
+                optionsContainer.innerHTML = `<p style="font-size:1.2rem; font-weight:600; text-align:center; color: var(--primary-color);">Sua pontuação final foi de ${score} de ${quizData.length} pontos!</p>`;
+                nextButton.style.display = "none";
+            }
+        }
+
+        function checkAnswer(selectedIndex) {
+            const currentQuiz = quizData[currentQuestionIndex];
+            const buttons = optionsContainer.querySelectorAll('.quiz-btn');
+            
+            buttons.forEach(btn => btn.disabled = true);
+
+            if (selectedIndex === currentQuiz.correct) {
+                score++;
+                scoreDisplayElement.innerText = score;
+                feedbackBox.className = "quiz-feedback correct-feedback";
+                feedbackBox.innerHTML = currentQuiz.feedbackCorrect;
+                buttons[selectedIndex].style.backgroundColor = "#def7ec";
+                buttons[selectedIndex].style.borderColor = "#31c48d";
+                buttons[selectedIndex].style.color = "#03543f";
+                audioCorrect.play().catch(e => console.log("Áudio bloqueado"));
+            } else {
+                feedbackBox.className = "quiz-feedback wrong-feedback";
+                feedbackBox.innerHTML = currentQuiz.feedbackWrong;
+                buttons[selectedIndex].style.backgroundColor = "#fde8e8";
+                buttons[selectedIndex].style.borderColor = "#f05252";
+                buttons[selectedIndex].style.color = "#9b1c1c";
+                buttons[currentQuiz.correct].style.backgroundColor = "#def7ec";
+                buttons[currentQuiz.correct].style.borderColor = "#31c48d";
+                audioWrong.play().catch(e => console.log("Áudio bloqueado"));
+            }
+
+            feedbackBox.style.display = "block";
+            nextButton.style.display = "block";
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentQuestionIndex++;
+            loadQuestion();
+        });
+
+        loadQuestion();
+
+        document.querySelectorAll('.flashcard').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
-</html>
+                                                                </html>
+            
