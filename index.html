@@ -1,73 +1,191 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Agrinho 2025 - Agro Forte, Futuro Sustentável</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #2e5a44;
+            color: #ffffff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a3cc5a;
+        }
+
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* Conteúdo Principal */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #2e5a44;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        /* Grid de Pilares */
+        .grid-pilares {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid #2e5a44;
+        }
+
+        .card h3 {
+            color: #2e5a44;
+            margin-bottom: 15px;
+        }
+
+        /* Bloco de Destaque (Equilíbrio) */
+        .equilibrio-box {
+            background-color: #e8f0ec;
+            border-left: 6px solid #a3cc5a;
+            padding: 30px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 50px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1e3a2b;
+            color: #a3cc5a;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="banner">
-    <img src="img/banner.png" alt="Banner sobre Agro Forte e Futuro Sustentável" />
-    <div class="titulo-banner">
-      <h1>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h1>
-    </div>
-  </div>
+    <header>
+        <div class="header-container">
+            <h1>AgroSustentável</h1>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#pilares">Pilares</a>
+                <a href="#equilibrio">O Equilíbrio</a>
+            </nav>
+        </div>
+    </header>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#proposta">O Equilíbrio</a></li>
-        <li><a href="#videos">Vídeos</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#tirinha">Tirinha</a></li>
-        <li><a href="#projetos">Ideias Sustentáveis</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="proposta">
-      <h2>O Equilíbrio Entre Produção e Meio Ambiente</h2>
-      <p>Produzir alimentos de forma eficiente e proteger a natureza não são caminhos opostos, mas sim complementares. O agro forte do futuro utiliza a tecnologia e o respeito à biodiversidade para garantir a segurança alimentar do planeta, preservando os recursos hídricos, a saúde do solo e as florestas. Conectando a sabedoria do campo à consciência da cidade, construímos um amanhã mais verde e próspero.</p>
+    <section class="hero" id="inicio">
+        <h2>Agro Forte, Futuro Sustentável</h2>
+        <p>Unindo a força da produção no campo com a preservação do meio ambiente para alimentar o amanhã.</p>
     </section>
 
-    <section id="videos">
-      <h2>Vídeos: Tecnologia e Sustentabilidade no Campo</h2>
-      <p>Confira abaixo produções que mostram o equilíbrio na prática. Veja depoimentos de jovens agricultores, pesquisadores e defensores ambientais que utilizam técnicas inovadoras — como o uso de painéis solares em comunidades agrícolas, rotação de culturas e sistemas agroflorestais — destacando os benefícios sociais, ambientais e econômicos dessa união.</p>
-      
-      <div class="videos">
-        <video controls>
-          <source src="videos/video_sustentabilidade.mp4" type="video/mp4">
-          Seu navegador não suporta vídeos HTML5.
-        </video>
-        <video controls>
-          <source src="videos/video_tecnologia_verde.mp4" type="video/mp4">
-          Seu navegador não suporta vídeos HTML5.
-        </video>
-      </div>
-    </section>
+    <main class="container">
+        
+        <section id="pilares">
+            <h2 class="section-title">Nossos Pilares de Produção</h2>
+            <div class="grid-pilares">
+                <div class="card">
+                    <h3>Tecnologia no Campo</h3>
+                    <p>O uso de agricultura de precisão, drones e inteligência artificial otimiza o uso de recursos, evitando desperdícios de água e insumos.</p>
+                </div>
+                <div class="card">
+                    <h3>Preservação Ativa</h3>
+                    <p>Práticas como o plantio direto, rotação de culturas e a conservação de áreas de preservação permanente mantêm o solo rico e protegido.</p>
+                </div>
+                <div class="card">
+                    <h3>Energia Limpa</h3>
+                    <p>A integração de painéis solares e o uso de biomassa nas propriedades reduzem a pegada de carbono de toda a cadeia produtiva.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="galeria">
-      <h2>Galeria: Práticas Verdes no Agro</h2>
-      <div class="galeria">
-        <img src="img/energia_solar.jpg" alt="Painéis solares em propriedades rurais">
-        <img src="img/reflorestamento.jpg" alt="Área de preservação e plantio integrado">
-        <img src="img/tecnologia_campo.jpg" alt="Uso de drones para agricultura de precisão">
-        <img src="img/feira_organica.jpg" alt="Produção sustentável chegando à cidade">
-      </div>
-    </section>
+        <hr style="border: 0; height: 1px; background: #ddd; margin: 40px 0;">
 
-    <section id="tirinha">
-      <h2>Tirinha Consciência Verde</h2>
-      <div class="tirinha">
-        <img src="img/tirinha_sustentavel.jpg" alt="Tirinha ilustrando a conservação ambiental no campo">
-      </div>
-    </section>
+        <section id="equilibrio" class="equilibrio-box">
+            <h2 style="color: #2e5a44; margin-bottom: 15px;">O Equilíbrio Necessário</h2>
+            <p>Produzir alimentos em larga escala e proteger a biodiversidade não são caminhos opostos. O verdadeiro progresso do agronegócio está na capacidade de regenerar o ecossistema enquanto se garante a segurança alimentar do planeta. Um agro forte é, essencialmente, um agro sustentável.</p>
+        </section>
 
-    <section id="projetos">
-      <h2>Projetos: Cultivando Ideias para o Futuro</h2>
-      <p>Como você acha que a tecnologia e a preservação podem caminhar juntas no dia a dia do campo e da cidade? Deixe sua sugestão abaixo!</p>
-      <textarea placeholder="Digite aqui suas ideias de projetos sobre agro sustentável, conservação da água, energia limpa ou reciclagem..."></textarea>
-    </
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AgroSustentável - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
