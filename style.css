@@ -126,10 +126,18 @@ header {
     margin-bottom: 10px;
 }
 
+.section-title.text-white {
+    color: white;
+}
+
 .section-subtitle {
     text-align: center;
     color: #666;
     margin-bottom: 40px;
+}
+
+.section-subtitle.text-white {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .bg-light {
@@ -263,6 +271,108 @@ header {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+/* SEÇÃO DO JOGUINHO (QUIZ) */
+.quiz-section {
+    background-color: var(--primary-color);
+    padding: 40px 0;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quiz-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.quiz-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.quiz-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.quiz-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.quiz-btn:hover {
+    background-color: #f7fafc;
+    border-color: #cbd5e0;
+}
+
+.hidden-radio {
+    display: none; /* Esconde a bolinha padrão do input */
+}
+
+/* Lógica do Jogo sem JavaScript (Uso do seletor :has) */
+.quiz-card:has(.correct-trigger input:checked) .correct-feedback {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.quiz-card:has(.correct-trigger input:checked) .correct-trigger {
+    background-color: #def7ec;
+    border-color: #31c48d;
+    color: #03543f;
+}
+
+.quiz-card:has(.wrong-trigger input:checked) .wrong-feedback {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.quiz-card:has(.wrong-trigger input:checked) .wrong-trigger {
+    background-color: #fde8e8;
+    border-color: #f05252;
+    color: #9b1c1c;
+}
+
+/* Oculta os feedbacks por padrão */
+.quiz-feedback {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.correct-feedback {
+    background-color: #def7ec;
+    color: #03543f;
+    border-left: 5px solid #31c48d;
+}
+
+.wrong-feedback {
+    background-color: #fde8e8;
+    color: #9b1c1c;
+    border-left: 5px solid #f05252;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* CTA Section */
 .cta-section {
     background: linear-gradient(rgba(44, 110, 73, 0.9), rgba(44, 110, 73, 0.9)), 
@@ -287,4 +397,24 @@ header {
 footer {
     background-color: var(--text-dark);
     color: #a0a2ad;
-    text-
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links li {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .quiz-options {
+        flex-direction: column;
+    }
+}
