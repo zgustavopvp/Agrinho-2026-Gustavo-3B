@@ -1,141 +1,41 @@
-/* Estilos Gerais */
+/* 1. VARIÁVEIS E RESET */
+:root {
+    --primary: #2e5a44;
+    --primary-light: #e8f0ec;
+    --accent: #a3cc5a;
+    --text-dark: #2d3748;
+    --text-light: #ffffff;
+    --bg-main: #f8fafc;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --transition: all 0.2s ease-in-out;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f4f7f5;
-    color: #333;
-    line-height: 1.6;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.5;
 }
 
-/* Cabeçalho e Menu */
-header {
-    background-color: #2e5a44;
-    color: #ffffff;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.header-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-header h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #a3cc5a;
-}
-
-/* Banner Principal (Hero) */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.hero h2 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-
-/* Conteúdo Central */
+/* 2. ESTRUTURA DO LAYOUT */
 .container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-.section-title {
-    text-align: center;
-    color: #2e5a44;
-    margin-bottom: 30px;
-    font-size: 2rem;
-}
-
-/* Grid de Pilares (Cards) */
-.grid-pilares {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-top: 5px solid #2e5a44;
-}
-
-.card h3 {
-    color: #2e5a44;
-    margin-bottom: 15px;
-}
-
-/* Bloco de Destaque */
-.equilibrio-box {
-    background-color: #e8f0ec;
-    border-left: 6px solid #a3cc5a;
-    padding: 30px;
-    border-radius: 0 8px 8px 0;
-    margin-bottom: 50px;
-}
-
-.equilibrio-box h2 {
-    color: #2e5a44; 
-    margin-bottom: 15px;
-}
-
-/* Divisor */
-.divisor {
-    border: 0; 
-    height: 1px; 
-    background: #ddd; 
-    margin: 40px 0;
-}
-
-/* Rodapé */
-footer {
-    background-color: #1e3a2b;
-    color: #a3cc5a;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    font
+/* 3. COMPONENTES */
+header {
+    background-color: var(--primary);
+    position: sticky
