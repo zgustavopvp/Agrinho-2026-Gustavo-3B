@@ -11,12 +11,12 @@ html {
 }
 
 :root {
-    --primary-color: #2c6e49; /* Verde Agro */
-    --secondary-color: #4c956c; /* Verde Claro */
-    --accent-color: #fefee3; /* Fundo Suave */
-    --text-dark: #2b2d42; /* Texto Principal */
-    --text-light: #f4f4f9; /* Texto Claro */
-    --bg-light: #f9fbf7; /* Fundo de seções alternativas */
+    --primary-color: #2c6e49; 
+    --secondary-color: #4c956c; 
+    --accent-color: #fefee3; 
+    --text-dark: #2b2d42; 
+    --text-light: #f4f4f9; 
+    --bg-light: #f9fbf7; 
 }
 
 body {
@@ -32,6 +32,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 20px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* Cabeçalho / Navbar */
@@ -234,7 +238,7 @@ header {
     opacity: 0.9;
 }
 
-/* Nova Seção de Conexões */
+/* Seção de Conexões */
 .botoes-conexoes {
     display: flex;
     justify-content: center;
@@ -274,6 +278,51 @@ header {
     font-weight: 500;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     display: none;
+}
+
+/* Elementos da Eco-Calculadora */
+.calc-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.calc-container label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.calc-input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.calc-input-group input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #cbd5e0;
+    border-radius: 30px;
+    outline: none;
+    width: 150px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.resultado-calc-box {
+    background-color: #e6f4ea;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    color: #137333;
+    font-size: 1rem;
 }
 
 .caixa-mensagem-visivel {
@@ -328,7 +377,7 @@ header {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* SEÇÃO DO NOVO QUIZ DINÂMICO */
+/* SEÇÃO DO QUIZ */
 .quiz-section {
     background-color: var(--primary-color);
     padding: 60px 0;
@@ -339,7 +388,6 @@ header {
     margin: 0 auto;
 }
 
-/* Placar de Pontos no cantinho */
 .quiz-score-board {
     display: flex;
     justify-content: space-between;
@@ -452,7 +500,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsividade Básica */
+/* Responsividade */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -464,4 +512,12 @@ footer {
     .hero-content h1 {
         font-size: 2.2rem;
     }
+    .calc-input-group {
+        flex-direction: column;
+        align-items: center;
     }
+    .calc-input-group input {
+        width: 100%;
+    }
+               }
+    
