@@ -220,12 +220,14 @@
     </footer>
 
     <script>
-        // Função para mostrar as conexões
+        // CORRIGIDO: Função de mostrar conexões agora com os IDs certos
         function mostrarConexao(mensagem) {
             const caixa = document.getElementById('caixa-mensagem');
             const texto = document.getElementById('texto-conexao');
-            texto.innerHTML = mensagem;
-            caixa.className = "caixa-mensagem-oculta caixa-mensagem-visivel";
+            if (caixa && texto) {
+                texto.innerHTML = mensagem;
+                caixa.className = "caixa-mensagem-oculta caixa-mensagem-visivel";
+            }
         }
 
         // Lógica da Eco-Calculadora
@@ -246,7 +248,7 @@
             resultadoBox.style.display = "block";
         }
 
-        // Banco de dados com as 10 perguntas do Quiz
+        // Banco de dados das 10 perguntas do Quiz
         const quizData = [
             {
                 question: "1. É possível aumentar a produção de alimentos e proteger o meio ambiente ao mesmo tempo?",
@@ -323,14 +325,20 @@
         let currentQuestionIndex = 0;
         let score = 0;
 
-        const questionTextElement = document.getElementById('quiz-question-text');
-        const optionsContainer = document.getElementById('quiz-options-container');
-        const feedbackBox = document.getElementById('quiz-feedback-box');
-        const nextButton = document.getElementById('next-btn');
-        const currentQuestionNumElement = document.getElementById('current-question-num');
-        const scoreDisplayElement = document.getElementById('score-display');
+        let questionTextElement, optionsContainer, feedbackBox, nextButton, currentQuestionNumElement, scoreDisplayElement;
+
+        function initQuizElements() {
+            questionTextElement = document.getElementById('quiz-question-text');
+            optionsContainer = document.getElementById('quiz-options-container');
+            feedbackBox = document.getElementById('quiz-feedback-box');
+            nextButton = document.getElementById('next-btn');
+            currentQuestionNumElement = document.getElementById('current-question-num');
+            scoreDisplayElement = document.getElementById('score-display');
+        }
 
         function loadQuestion() {
+            if(!questionTextElement) return;
+            
             feedbackBox.style.display = "none";
             nextButton.style.display = "none";
             optionsContainer.innerHTML = "";
@@ -346,8 +354,4 @@
                     button.classList.add('quiz-btn');
                     button.addEventListener('click', () => checkAnswer(index));
                     optionsContainer.appendChild(button);
-                });
-            } else {
-                currentQuestionNumElement.innerText = "Fim!";
-                questionTextElement.innerText = `Você concluiu o desafio!`;
-                optionsContainer.innerHTML = `<p style="font-size:1.2rem; font-weight:600; text-align:center; color: var(--primary-co
+          
