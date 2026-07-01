@@ -133,13 +133,13 @@
         <p class="section-subtitle">Clique nos botões abaixo para descobrir a ligação secreta do agro com o seu dia a dia.</p>
         
         <div class="botoes-conexoes">
-            <button class="btn-interativo" onclick="mostrarConexao('futebol', '⚽ Agro no Futebol: A grama perfeita dos estádios depende da tecnologia de manejo do solo. Além disso, a bola oficial e as chuteiras de couro ou materiais sintéticos biodegradáveis derivam da agropecuária e da biotecnologia vegetal!')">
+            <button class="btn-interativo" onclick="mostrarConexao('⚽ Agro no Futebol: A grama perfeita dos estádios depende da tecnologia de manejo do solo. Além disso, a bola oficial e as chuteiras de couro ou materiais sintéticos biodegradáveis derivam da agropecuária e da biotecnologia vegetal!')">
                 ⚽ Futebol
             </button>
-            <button class="btn-interativo" onclick="mostrarConexao('roupa', '👕 Agro na Moda: Aquela sua camiseta favorita de algodão só existe graças à agricultura! Hoje, o Brasil é referência em algodão sustentável, cultivado com água da chuva e menos defensivos.')">
+            <button class="btn-interativo" onclick="mostrarConexao('👕 Agro na Moda: Aquela sua camiseta favorita de algodão só existe graças à agricultura! Hoje, o Brasil é referência em algodão sustentável, cultivado com água da chuva e menos defensivos.')">
                 👕 Suas Roupas
             </button>
-            <button class="btn-interativo" onclick="mostrarConexao('celular', '📱 Agro no Celular: Sabia que o biodiesel que move a energia das fábricas e até componentes plásticos biodegradáveis feitos de amido de milho ou cana estão presentes na cadeia de produção dos eletrônicos?')">
+            <button class="btn-interativo" onclick="mostrarConexao('📱 Agro no Celular: Sabia que o biodiesel que move a energia das fábricas e até componentes plásticos biodegradáveis feitos de amido de milho ou cana estão presentes na cadeia de produção dos eletrônicos?')">
                 📱 Tecnologia
             </button>
         </div>
@@ -155,7 +155,7 @@
             <p class="section-subtitle">Descubra o poder da eficiência! Veja quanta lavoura de gotejamento sustentável pode ser mantida com o equivalente ao consumo de água do seu banho diário.</p>
             
             <div class="calc-container">
-                <label for="banho-litros">Quantos minutos você gasta no banho por dia? (Média: 10L por minuto)</label>
+                <label for="banho-minutos">Quantos minutos você gasta no banho por dia? (Média: 10L por minuto)</label>
                 <div class="calc-input-group">
                     <input type="number" id="banho-minutos" placeholder="Ex: 10" min="1">
                     <button class="btn" onclick="calcularImpacto()">Calcular Impacto</button>
@@ -220,13 +220,15 @@
     </footer>
 
     <script>
-        function mostrarConexao(tipo, mensagem) {
+        // Função corrigida das conexões do dia a dia
+        function mostrarConexao(mensagem) {
             const caixa = document.getElementById('caixa-mensagem');
             const texto = document.getElementById('texto-conexao');
             texto.innerHTML = mensagem;
             caixa.className = "caixa-mensagem-oculta caixa-mensagem-visivel";
         }
 
+        // Função corrigida da calculadora ambiental
         function calcularImpacto() {
             const minutos = document.getElementById('banho-minutos').value;
             const resultadoBox = document.getElementById('resultado-calculadora');
@@ -238,7 +240,6 @@
             }
 
             const litrosGastos = minutos * 10;
-            // No gotejamento eficiente, usa-se cerca de 4 litros por m² ao dia.
             const metrosQuadrados = (litrosGastos / 4).toFixed(1);
 
             resultadoTexto.innerHTML = `💧 Seu banho consome cerca de <strong>${litrosGastos} litros</strong> de água.<br> 
@@ -248,6 +249,7 @@
             resultadoBox.classList.add("caixa-mensagem-visivel");
         }
 
+        // Banco de dados das 10 perguntas do quiz
         const quizData = [
             {
                 question: "1. É possível aumentar a produção de alimentos e proteger o meio ambiente ao mesmo tempo?",
@@ -275,7 +277,7 @@
                 options: ["Deixar o solo descansar sem plantar nada", "Evitar o desgaste de nutrientes e quebrar o ciclo de pragas de forma natural", "Apenas estética visual das propriedades"],
                 correct: 1,
                 feedbackCorrect: "🎉 Isso aí! Alternar as plantas mantém o solo rico e reduz drasticamente a necessidade de químicos adicionais.",
-                feedbackWrong: "❌ Incorreto. A rotação serve para renovar os nutrientes da terra naturalmente."
+                feedbackWrong: "❌ Incorreto. A rotação serves para renovar os nutrientes da terra naturalmente."
             },
             {
                 question: "5. Qual é o principal objetivo do Plano ABC (Agricultura de Baixo Carbono)?",
@@ -344,5 +346,4 @@
             
             if (currentQuestionIndex < quizData.length) {
                 const currentQuiz = quizData[currentQuestionIndex];
-                currentQuestionNumElement.innerText = `${currentQuestionIndex + 1}/${quizData.length}`;
-                questionTextEleme
+                currentQuestionNumElement.innerText = `${currentQuestionIndex + 1}/${quizData.l
