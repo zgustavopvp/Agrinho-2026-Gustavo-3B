@@ -220,7 +220,7 @@
     </footer>
 
     <script>
-        // Função corrigida das conexões do dia a dia
+        // Função das conexões cotidianas
         function mostrarConexao(mensagem) {
             const caixa = document.getElementById('caixa-mensagem');
             const texto = document.getElementById('texto-conexao');
@@ -228,7 +228,7 @@
             caixa.className = "caixa-mensagem-oculta caixa-mensagem-visivel";
         }
 
-        // Função corrigida da calculadora ambiental
+        // Função da calculadora ambiental
         function calcularImpacto() {
             const minutos = document.getElementById('banho-minutos').value;
             const resultadoBox = document.getElementById('resultado-calculadora');
@@ -249,7 +249,7 @@
             resultadoBox.classList.add("caixa-mensagem-visivel");
         }
 
-        // Banco de dados das 10 perguntas do quiz
+        // Dados do Quiz
         const quizData = [
             {
                 question: "1. É possível aumentar a produção de alimentos e proteger o meio ambiente ao mesmo tempo?",
@@ -277,7 +277,7 @@
                 options: ["Deixar o solo descansar sem plantar nada", "Evitar o desgaste de nutrientes e quebrar o ciclo de pragas de forma natural", "Apenas estética visual das propriedades"],
                 correct: 1,
                 feedbackCorrect: "🎉 Isso aí! Alternar as plantas mantém o solo rico e reduz drasticamente a necessidade de químicos adicionais.",
-                feedbackWrong: "❌ Incorreto. A rotação serves para renovar os nutrientes da terra naturalmente."
+                feedbackWrong: "❌ Incorreto. A rotação serve para renovar os nutrientes da terra naturalmente."
             },
             {
                 question: "5. Qual é o principal objetivo do Plano ABC (Agricultura de Baixo Carbono)?",
@@ -288,7 +288,7 @@
             },
             {
                 question: "6. O que são 'bioinsumos' na agricultura moderna?",
-                options: ["Defensivos químicos super concentrados de alta toxicidade", "Produtos de origem vegetal, animal ou microbiana usados para nutrir ou proteger as plantas naturalmente", "Sensores digitais instalados nas raízes"],
+                options: ["Defensivos químicos super concentrados de alta toxicidade", "Produtos de origem vegetal, animal ou microbiana usados para nutrir ou proteger as plantas naturalmente", "Sensores digitais instalados nas raíces"],
                 correct: 1,
                 feedbackCorrect: "🎉 Isso mesmo! Eles diminuem o uso de químicos agressivos, protegendo a saúde da terra e da água.",
                 feedbackWrong: "❌ Errado. Os bioinsumos são soluções biológicas e naturais, não compostos químicos pesados."
@@ -326,12 +326,6 @@
         let currentQuestionIndex = 0;
         let score = 0;
 
-        const audioCorrect = new Audio('https://assets.mixkit.co/active_storage/sfx/2019/2019-84.wav');
-        const audioWrong = new Audio('https://assets.mixkit.co/active_storage/sfx/2018/2018-84.wav');
-        
-        audioCorrect.volume = 0.3;
-        audioWrong.volume = 0.3;
-
         const questionTextElement = document.getElementById('quiz-question-text');
         const optionsContainer = document.getElementById('quiz-options-container');
         const feedbackBox = document.getElementById('quiz-feedback-box');
@@ -346,4 +340,11 @@
             
             if (currentQuestionIndex < quizData.length) {
                 const currentQuiz = quizData[currentQuestionIndex];
-                currentQuestionNumElement.innerText = `${currentQuestionIndex + 1}/${quizData.l
+                currentQuestionNumElement.innerText = `${currentQuestionIndex + 1}/${quizData.length}`;
+                questionTextElement.innerText = currentQuiz.question;
+
+                currentQuiz.options.forEach((option, index) => {
+                    const button = document.createElement('button');
+                    button.innerText = option;
+                    button.classList.add('quiz-btn');
+                  
