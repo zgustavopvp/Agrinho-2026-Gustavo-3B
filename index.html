@@ -19,7 +19,6 @@
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#pilares">Pilares</a></li>
                     <li><a href="#conexoes">Conexões</a></li>
-                    <li><a href="#calculadora">Eco-Calculadora</a></li>
                     <li><a href="#cooperativas">Cooperativas</a></li>
                     <li><a href="#quiz">Desafio</a></li>
                 </ul>
@@ -37,7 +36,7 @@
 
     <section id="pilares" class="container section">
         <h2 class="section-title">Como o Agro se torna mais forte?</h2>
-        <p class="section-subtitle">Passe o mouse ou toque nos cards para descobrir os segredos da sustentabilidade no campo.</p>
+        <p class="section-subtitle">Passe o mouse ou toque nos cards para descobrir o segredo da sustentabilidade.</p>
         
         <div class="grid-flashcards">
             
@@ -83,48 +82,6 @@
                 </div>
             </div>
 
-            <div class="flashcard">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">
-                        <div class="card-icon" aria-hidden="true">🌳</div>
-                        <h3>Sistema ILPF</h3>
-                        <span class="hint">Ver mais ➔</span>
-                    </div>
-                    <div class="flashcard-back">
-                        <h3>Integração Máxima</h3>
-                        <p>A Integração Lavoura-Pecuária-Floresta combina grãos, gado e árvores na mesma área. Conforto para o animal e proteção para a terra.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flashcard">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">
-                        <div class="card-icon" aria-hidden="true">⛰️</div>
-                        <h3>Proteção de APPs</h3>
-                        <span class="hint">Ver mais ➔</span>
-                    </div>
-                    <div class="flashcard-back">
-                        <h3>Guardiões da Água</h3>
-                        <p>Preservar matas ciliares e nascentes dentro das propriedades rurais garante água limpa e corredores ecológicos para a fauna silvestre.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flashcard">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">
-                        <div class="card-icon" aria-hidden="true">☀️</div>
-                        <h3>Energia Limpa</h3>
-                        <span class="hint">Ver mais ➔</span>
-                    </div>
-                    <div class="flashcard-back">
-                        <h3>Matriz Renovável</h3>
-                        <p>Fazendas modernas utilizam placas solares e usinas de biogás para mover tratores e gerar eletricidade limpa de forma independente.</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -133,38 +90,19 @@
         <p class="section-subtitle">Clique nos botões abaixo para descobrir a ligação secreta do agro com o seu dia a dia.</p>
         
         <div class="botoes-conexoes">
-            <button class="btn-interativo" onclick="mostrarConexao('⚽ Agro no Futebol: A grama perfeita dos estádios depende da tecnologia de manejo do solo. Além disso, a bola oficial e as chuteiras de couro ou materiais sintéticos biodegradáveis derivam da agropecuária e da biotecnologia vegetal!')">
+            <button class="btn-interativo" onclick="mostrarConexao('futebol', '⚽ Agro no Futebol: A grama perfeita dos estádios depende da tecnologia de manejo do solo. Além disso, a bola oficial e as chuteiras de couro ou materiais sintéticos biodegradáveis derivam da agropecuária e da biotecnologia vegetal!')">
                 ⚽ Futebol
             </button>
-            <button class="btn-interativo" onclick="mostrarConexao('👕 Agro na Moda: Aquela sua camiseta favorita de algodão só existe graças à agricultura! Hoje, o Brasil é referência em algodão sustentável, cultivado com água da chuva e menos defensivos.')">
+            <button class="btn-interativo" onclick="mostrarConexao('roupa', '👕 Agro na Moda: Aquela sua camiseta favorita de algodão só existe graças à agricultura! Hoje, o Brasil é referência em algodão sustentável, cultivado com água da chuva e menos defensivos.')">
                 👕 Suas Roupas
             </button>
-            <button class="btn-interativo" onclick="mostrarConexao('📱 Agro no Celular: Sabia que o biodiesel que move a energia das fábricas e até componentes plásticos biodegradáveis feitos de amido de milho ou cana estão presentes na cadeia de produção dos eletrônicos?')">
+            <button class="btn-interativo" onclick="mostrarConexao('celular', '📱 Agro no Celular: Sabia que o biodiesel que move a energia das fábricas e até componentes plásticos biodegradáveis feitos de amido de milho ou cana estão presentes na cadeia de produção dos eletrônicos?')">
                 📱 Tecnologia
             </button>
         </div>
 
         <div id="caixa-mensagem" class="caixa-mensagem-oculta">
             <p id="texto-conexao"></p>
-        </div>
-    </section>
-
-    <section id="calculadora" class="bg-light">
-        <div class="container section text-center">
-            <h2 class="section-title">Eco-Calculadora do Campo</h2>
-            <p class="section-subtitle">Descubra o poder da eficiência! Veja quanta lavoura de gotejamento sustentável pode ser mantida com o equivalente ao consumo de água do seu banho diário.</p>
-            
-            <div class="calc-container">
-                <label for="banho-minutos">Quantos minutos você gasta no banho por dia? (Média: 10L por minuto)</label>
-                <div class="calc-input-group">
-                    <input type="number" id="banho-minutos" placeholder="Ex: 10" min="1">
-                    <button class="btn" onclick="calcularImpacto()">Calcular Impacto</button>
-                </div>
-                
-                <div id="resultado-calculadora" class="resultado-calc-box" style="display: none;">
-                    <p id="texto-resultado-calc"></p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -196,9 +134,11 @@
                 <div class="quiz-card" id="quiz-box">
                     <h3 id="quiz-question-text">Carregando pergunta...</h3>
                     
-                    <div class="quiz-options" id="quiz-options-container"></div>
+                    <div class="quiz-options" id="quiz-options-container">
+                        </div>
                     
-                    <div class="quiz-feedback" id="quiz-feedback-box"></div>
+                    <div class="quiz-feedback" id="quiz-feedback-box">
+                        </div>
 
                     <button id="next-btn" class="btn" style="display: none; margin: 20px auto 0 auto;">Próxima Pergunta ➔</button>
                 </div>
@@ -208,7 +148,7 @@
 
     <section class="cta-section">
         <div class="container">
-            <h2>Pronto para semear essa ideia?</h2>
+            <h2>Pronto para semear essa idea?</h2>
             <p>O equilíbrio entre produção e meio ambiente não é uma escolha, é o único caminho para a segurança alimentar do planeta.</p>
         </div>
     </section>
@@ -220,36 +160,14 @@
     </footer>
 
     <script>
-        // Função das conexões cotidianas
-        function mostrarConexao(mensagem) {
+        function mostrarConexao(tipo, mensagem) {
             const caixa = document.getElementById('caixa-mensagem');
             const texto = document.getElementById('texto-conexao');
             texto.innerHTML = mensagem;
             caixa.className = "caixa-mensagem-oculta caixa-mensagem-visivel";
         }
 
-        // Função da calculadora ambiental
-        function calcularImpacto() {
-            const minutos = document.getElementById('banho-minutos').value;
-            const resultadoBox = document.getElementById('resultado-calculadora');
-            const resultadoTexto = document.getElementById('texto-resultado-calc');
-            
-            if(!minutos || minutos <= 0) {
-                alert("Por favor, insira um número válido de minutos!");
-                return;
-            }
-
-            const litrosGastos = minutos * 10;
-            const metrosQuadrados = (litrosGastos / 4).toFixed(1);
-
-            resultadoTexto.innerHTML = `💧 Seu banho consome cerca de <strong>${litrosGastos} litros</strong> de água.<br> 
-            🌾 Na agricultura sustentável com irrigação por <strong>gotejamento de precisão</strong>, essa mesma quantidade de água é capaz de manter viva e produzir alimentos saudáveis em uma área de <strong>${metrosQuadrados} m²</strong> de lavoura por um dia inteiro de forma super econômica!`;
-            
-            resultadoBox.style.display = "block";
-            resultadoBox.classList.add("caixa-mensagem-visivel");
-        }
-
-        // Dados do Quiz
+        // LISTA ATUALIZADA COM EXATAMENTE 10 PERGUNTAS
         const quizData = [
             {
                 question: "1. É possível aumentar a produção de alimentos e proteger o meio ambiente ao mesmo tempo?",
@@ -288,7 +206,7 @@
             },
             {
                 question: "6. O que são 'bioinsumos' na agricultura moderna?",
-                options: ["Defensivos químicos super concentrados de alta toxicidade", "Produtos de origem vegetal, animal ou microbiana usados para nutrir ou proteger as plantas naturalmente", "Sensores digitais instalados nas raíces"],
+                options: ["Defensivos químicos super concentrados de alta toxicidade", "Produtos de origem vegetal, animal ou microbiana usados para nutrir ou proteger as plantas naturalmente", "Sensores digitais instalados nas raízes"],
                 correct: 1,
                 feedbackCorrect: "🎉 Isso mesmo! Eles diminuem o uso de químicos agressivos, protegendo a saúde da terra e da água.",
                 feedbackWrong: "❌ Errado. Os bioinsumos são soluções biológicas e naturais, não compostos químicos pesados."
@@ -326,6 +244,12 @@
         let currentQuestionIndex = 0;
         let score = 0;
 
+        const audioCorrect = new Audio('https://assets.mixkit.co/active_storage/sfx/2019/2019-84.wav');
+        const audioWrong = new Audio('https://assets.mixkit.co/active_storage/sfx/2018/2018-84.wav');
+        
+        audioCorrect.volume = 0.3;
+        audioWrong.volume = 0.3;
+
         const questionTextElement = document.getElementById('quiz-question-text');
         const optionsContainer = document.getElementById('quiz-options-container');
         const feedbackBox = document.getElementById('quiz-feedback-box');
@@ -347,4 +271,59 @@
                     const button = document.createElement('button');
                     button.innerText = option;
                     button.classList.add('quiz-btn');
-                  
+                    button.addEventListener('click', () => checkAnswer(index));
+                    optionsContainer.appendChild(button);
+                });
+            } else {
+                currentQuestionNumElement.innerText = "Fim!";
+                questionTextElement.innerText = `Você concluiu o desafio!`;
+                optionsContainer.innerHTML = `<p style="font-size:1.2rem; font-weight:600; text-align:center; color: var(--primary-color);">Sua pontuação final foi de ${score} de ${quizData.length} pontos!</p>`;
+                nextButton.style.display = "none";
+            }
+        }
+
+        function checkAnswer(selectedIndex) {
+            const currentQuiz = quizData[currentQuestionIndex];
+            const buttons = optionsContainer.querySelectorAll('.quiz-btn');
+            
+            buttons.forEach(btn => btn.disabled = true);
+
+            if (selectedIndex === currentQuiz.correct) {
+                score++;
+                scoreDisplayElement.innerText = score;
+                feedbackBox.className = "quiz-feedback correct-feedback";
+                feedbackBox.innerHTML = currentQuiz.feedbackCorrect;
+                buttons[selectedIndex].style.backgroundColor = "#def7ec";
+                buttons[selectedIndex].style.borderColor = "#31c48d";
+                buttons[selectedIndex].style.color = "#03543f";
+                audioCorrect.play().catch(e => console.log("Áudio bloqueado"));
+            } else {
+                feedbackBox.className = "quiz-feedback wrong-feedback";
+                feedbackBox.innerHTML = currentQuiz.feedbackWrong;
+                buttons[selectedIndex].style.backgroundColor = "#fde8e8";
+                buttons[selectedIndex].style.borderColor = "#f05252";
+                buttons[selectedIndex].style.color = "#9b1c1c";
+                buttons[currentQuiz.correct].style.backgroundColor = "#def7ec";
+                buttons[currentQuiz.correct].style.borderColor = "#31c48d";
+                audioWrong.play().catch(e => console.log("Áudio bloqueado"));
+            }
+
+            feedbackBox.style.display = "block";
+            nextButton.style.display = "block";
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentQuestionIndex++;
+            loadQuestion();
+        });
+
+        loadQuestion();
+
+        document.querySelectorAll('.flashcard').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
