@@ -19,9 +19,8 @@
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#pilares">Pilares</a></li>
                     <li><a href="#conexoes">Conexões</a></li>
-                    <li><a href="#calculadora">Eco-Calculadora</a></li>
                     <li><a href="#cooperativas">Cooperativas</a></li>
-                    <li><a href="#quiz">Desafio</a></li>
+                    <li><a href="#mitos-verdades">Mitos e Verdades</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,11 +36,11 @@
 
     <section id="pilares" class="container section">
         <h2 class="section-title">Como o Agro se torna mais forte?</h2>
-        <p class="section-subtitle">Passe o mouse ou toque nos cards para descobrir os segredos da sustentabilidade.</p>
+        <p class="section-subtitle">Passe o mouse ou toque nos cards para descobrir o segredo da sustentabilidade.</p>
         
         <div class="grid-flashcards">
             
-            <div class="flashcard">
+            <div class="flashcard" tabindex="0">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
                         <div class="card-icon" aria-hidden="true">🌱</div>
@@ -55,7 +54,7 @@
                 </div>
             </div>
 
-            <div class="flashcard">
+            <div class="flashcard" tabindex="0">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
                         <div class="card-icon" aria-hidden="true">💧</div>
@@ -69,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="flashcard">
+            <div class="flashcard" tabindex="0">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
                         <div class="card-icon" aria-hidden="true">🔄</div>
@@ -83,88 +82,34 @@
                 </div>
             </div>
 
-            <div class="flashcard">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">
-                        <div class="card-icon" aria-hidden="true">🚜</div>
-                        <h3>Força do Paraná</h3>
-                        <span class="hint">Ver mais ➔</span>
-                    </div>
-                    <div class="flashcard-back">
-                        <h3>Referência Nacional</h3>
-                        <p>O Paraná se destaca no plantio direto na palha e no forte cooperativismo, mostrando como a conservação do solo gera recordes de safras de soja e milho.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flashcard">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">
-                        <div class="card-icon" aria-hidden="true">🌳</div>
-                        <h3>Sistema ILPF</h3>
-                        <span class="hint">Ver mais ➔</span>
-                    </div>
-                    <div class="flashcard-back">
-                        <h3>Integração Total</h3>
-                        <p>Integração Lavoura-Pecuária-Floresta combina árvores, pasto e grãos na mesma área. Conforto térmico para o gado e captação de gás carbônico.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flashcard">
-                <div class="flashcard-inner">
-                    <div class="flashcard-front">
-                        <div class="card-icon" aria-hidden="true">🦠</div>
-                        <h3>Bioinsumos</h3>
-                        <span class="hint">Ver mais ➔</span>
-                    </div>
-                    <div class="flashcard-back">
-                        <h3>Defesa Natural</h3>
-                        <p>Uso de microrganismos e defensores biológicos para nutrir e proteger as plantas, reduzindo drasticamente a necessidade de produtos químicos pesados.</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <section id="conexoes" class="container section">
         <h2 class="section-title">O Agro está em tudo!</h2>
-        <p class="section-subtitle">Clique nos botões abaixo para descobrir a ligação secreta do agro com o seu dia a dia.</p>
+        <p class="section-subtitle">Clique nos blocos abaixo para descobrir a ligação secreta do agro com o seu dia a dia.</p>
         
-        <div class="botoes-conexoes">
-            <button class="btn-interativo" onclick="mostrarConexao('⚽ Agro no Futebol: A grama perfeita dos estádios depende da tecnologia de manejo do solo. Além disso, a bola oficial e as chuteiras de couro ou materiais sintéticos biodegradáveis derivam da agropecuária e da biotecnologia vegetal!')">
-                ⚽ Futebol
-            </button>
-            <button class="btn-interativo" onclick="mostrarConexao('👕 Agro na Moda: Aquela sua camiseta favorita de algodão só existe graças à agricultura! Hoje, o Brasil é referência em algodão sustentável, cultivado com água da chuva e menos defensivos.')">
-                👕 Suas Roupas
-            </button>
-            <button class="btn-interativo" onclick="mostrarConexao('📱 Agro no Celular: Sabia que o biodiesel que move a energia das fábricas e até componentes plásticos biodegradáveis feitos de amido de milho ou cana estão presentes na cadeia de produção dos eletrônicos?')">
-                📱 Tecnologia
-            </button>
-        </div>
-
-        <div id="caixa-mensagem" class="caixa-mensagem-oculta">
-            <p id="texto-conexao"></p>
-        </div>
-    </section>
-
-    <section id="calculadora" class="bg-light">
-        <div class="container section text-center">
-            <h2 class="section-title">Eco-Calculadora do Campo</h2>
-            <p class="section-subtitle">Descubra o poder da eficiência! Veja quanta lavoura de gotejamento sustentável pode ser mantida com o equivalente ao consumo de água do seu banho diário.</p>
-            
-            <div class="calc-box">
-                <label for="banho-minutos">Quantos minutos você gasta no banho por dia? (Média: 10L por minuto)</label>
-                <div class="calc-input-group">
-                    <input type="number" id="banho-minutos" placeholder="Ex: 10" min="1">
-                    <button class="btn" onclick="calcularImpacto()">Calcular Impacto</button>
+        <div class="abas-css">
+            <details class="aba-item">
+                <summary class="aba-botao">⚽ Futebol</summary>
+                <div class="aba-conteudo">
+                    <p>⚽ <strong>Agro no Futebol:</strong> A grama perfeita dos estádios depende da tecnologia de manejo do solo. Além disso, a bola oficial e as chuteiras de couro ou materiais sintéticos biodegradáveis derivam da agropecuária e da biotecnologia vegetal!</p>
                 </div>
-                
-                <div id="resultado-calculadora" class="resultado-calc-box" style="display: none;">
-                    <p id="texto-resultado-calc"></p>
+            </details>
+
+            <details class="aba-item">
+                <summary class="aba-botao">👕 Suas Roupas</summary>
+                <div class="aba-conteudo">
+                    <p>👕 <strong>Agro na Moda:</strong> Aquela sua camiseta favorita de algodão só existe graças à agricultura! Hoje, o Brasil é referência em algodão sustentável, cultivado com água da chuva e menos defensivos.</p>
                 </div>
-            </div>
+            </details>
+
+            <details class="aba-item">
+                <summary class="aba-botao">📱 Tecnologia</summary>
+                <div class="aba-conteudo">
+                    <p>📱 <strong>Agro no Celular:</strong> Sabia que o biodiesel que move a energia das fábricas e até componentes plásticos biodegradáveis feitos de amido de milho ou cana estão presentes na cadeia de produção dos eletrônicos?</p>
+                </div>
+            </details>
         </div>
     </section>
 
@@ -182,26 +127,39 @@
         </div>
     </section>
 
-    <section id="quiz" class="quiz-section">
+    <section id="mitos-verdades" class="quiz-section">
         <div class="container">
-            <h2 class="section-title text-white">Desafio do Agro Sustentável</h2>
-            <p class="section-subtitle text-white">Teste seus conhecimentos! Responda as perguntas e acumule pontos.</p>
+            <h2 class="section-title text-white">Desafio Mitos vs Verdades</h2>
+            <p class="section-subtitle text-white">Clique nas perguntas abaixo para revelar as respostas e testar seus conhecimentos!</p>
             
-            <div class="quiz-container">
-                <div class="quiz-score-board">
-                    <span>Pergunta: <strong id="current-question-num">1/10</strong></span>
-                    <span>Pontos: <strong id="score-display">0</strong></span>
-                </div>
+            <div class="acordeon-container">
+                <details class="acordeon-item">
+                    <summary class="acordeon-titulo">1. É possível aumentar a produção de alimentos e proteger o meio ambiente ao mesmo tempo?</summary>
+                    <div class="acordeon-resposta">
+                        <p><strong>🎉 VERDADEIRO!</strong> Com tecnologia, rotação de culturas e agricultura de precisão, produzimos mais usando menos recursos e protegendo a terra.</p>
+                    </div>
+                </details>
 
-                <div class="quiz-card" id="quiz-box">
-                    <h3 id="quiz-question-text">Carregando pergunta...</h3>
-                    
-                    <div class="quiz-options" id="quiz-options-container"></div>
-                    
-                    <div class="quiz-feedback" id="quiz-feedback-box"></div>
+                <details class="acordeon-item">
+                    <summary class="acordeon-titulo">2. As cooperativas agrícolas servem apenas para grandes proprietários de terra?</summary>
+                    <div class="acordeon-resposta-errada">
+                        <p><strong>❌ FALSO!</strong> Elas servem justamente para unir pequenos e médios produtores, dando a eles força de mercado e acesso a tecnologias de ponta.</p>
+                    </div>
+                </details>
 
-                    <button id="next-btn" class="btn" style="display: none; margin: 20px auto 0 auto;">Próxima Pergunta ➔</button>
-                </div>
+                <details class="acordeon-item">
+                    <summary class="acordeon-titulo">3. A agricultura de precisão gasta mais água que os métodos tradicionais?</summary>
+                    <div class="acordeon-resposta-errada">
+                        <p><strong>❌ FALSO!</strong> Ela usa dados, satélites e drones para aplicar água e insumos no local exato e na quantidade perfeita, evitando qualquer desperdício.</p>
+                    </div>
+                </details>
+
+                <details class="acordeon-item">
+                    <summary class="acordeon-titulo">4. A rotação de culturas ajuda a evitar pragas naturalmente?</summary>
+                    <div class="acordeon-resposta">
+                        <p><strong>🎉 VERDADEIRO!</strong> Alternar as plantas no mesmo solo quebra o ciclo de vida das pragas e renova os nutrientes da terra sem depender tanto de químicos.</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
@@ -219,139 +177,5 @@
         </div>
     </footer>
 
-    <script>
-        // CORRIGIDO: Função de mostrar conexões agora com os IDs certos
-        function mostrarConexao(mensagem) {
-            const caixa = document.getElementById('caixa-mensagem');
-            const texto = document.getElementById('texto-conexao');
-            if (caixa && texto) {
-                texto.innerHTML = mensagem;
-                caixa.className = "caixa-mensagem-oculta caixa-mensagem-visivel";
-            }
-        }
-
-        // Lógica da Eco-Calculadora
-        function calcularImpacto() {
-            const minutos = document.getElementById('banho-minutos').value;
-            const resultadoBox = document.getElementById('resultado-calculadora');
-            const resultadoTexto = document.getElementById('texto-resultado-calc');
-            
-            if(!minutos || minutos <= 0) {
-                alert("Por favor, insira um número válido de minutos!");
-                return;
-            }
-
-            const litrosGastos = minutos * 10;
-            const metrosQuadrados = (litrosGastos / 4).toFixed(1);
-
-            resultadoTexto.innerHTML = `💧 Seu banho consome cerca de <strong>${litrosGastos} litros</strong> de água.<br><br>🌾 Na irrigação por <strong>gotejamento de precisão</strong> do agro sustentável, essa mesma quantidade mantém viva e produz alimentos em uma área de <strong>${metrosQuadrados} m²</strong> de lavoura por um dia inteiro!`;
-            resultadoBox.style.display = "block";
-        }
-
-        // Banco de dados das 10 perguntas do Quiz
-        const quizData = [
-            {
-                question: "1. É possível aumentar a produção de alimentos e proteger o meio ambiente ao mesmo tempo?",
-                options: ["Verdadeiro", "Falso"],
-                correct: 0,
-                feedbackCorrect: "🎉 Perfeito! Com tecnologia, rotação de culturas e agricultura de precisão, produzimos mais usando menos recursos.",
-                feedbackWrong: "❌ Incorreto... É totalmente possível através do manejo sustentável e da tecnologia verde!"
-            },
-            {
-                question: "2. As cooperativas agrícolas servem apenas para grandes proprietários de terra?",
-                options: ["Verdadeiro", "Falso"],
-                correct: 1,
-                feedbackCorrect: "🎉 Exato! Elas unem pequenos e médios produtores para que juntos ganhem competitividade no mercado.",
-                feedbackWrong: "❌ Errado. Elas são essenciais justamente para dar força de mercado aos pequenos produtores."
-            },
-            {
-                question: "3. O que é a agricultura de precisão no ecossistema do agro sustentável?",
-                options: ["Usar o mesmo tanto de água em toda plantação", "Uso de dados, satélites e drones para aplicar recursos no local exato", "Plantar apenas um tipo de semente no ano todo"],
-                correct: 1,
-                feedbackCorrect: "🎉 Correto! Ela evita desperdícios aplicando água ou insumos apenas onde a planta realmente precisa.",
-                feedbackWrong: "❌ Errado. A agricultura de precisão usa mapas e tecnologia para dosar os recursos perfeitamente."
-            },
-            {
-                question: "4. Qual é a principal vantagem da rotação de culturas para o solo?",
-                options: ["Deixar o solo descansar sem plantar nada", "Evitar o desgaste de nutrientes e quebrar o ciclo de pragas de forma natural", "Apenas estética visual das propriedades"],
-                correct: 1,
-                feedbackCorrect: "🎉 Isso aí! Alternar as plantas mantém o solo rico e reduz drasticamente a necessidade de químicos adicionais.",
-                feedbackWrong: "❌ Incorreto. A rotação serve para renovar os nutrientes da terra naturalmente."
-            },
-            {
-                question: "5. Qual estado brasileiro se destaca pelo forte cooperativismo e práticas pioneiras de plantio direto?",
-                options: ["Paraná", "Amazonas", "Amapá"],
-                correct: 0,
-                feedbackCorrect: "🎉 Certinho! O Paraná é referência nacional no cuidado com o solo e na organização de grandes cooperativas agrícolas sustentáveis.",
-                feedbackWrong: "❌ Incorreto. O Paraná é o grande pioneiro e destaque nessa técnica de preservação."
-            },
-            {
-                question: "6. O que são 'bioinsumos' na agricultura moderna?",
-                options: ["Defensivos químicos pesados", "Produtos de origem vegetal, animal ou microbiana usados para nutrir e proteger as plantas naturalmente", "Ferramentas metálicas de colheita"],
-                correct: 1,
-                feedbackCorrect: "🎉 Isso mesmo! Eles substituem defensivos químicos agressivos utilizando soluções biológicas naturais.",
-                feedbackWrong: "❌ Errado. Os bioinsumos são biológicos e naturais, não compostos químicos poluentes."
-            },
-            {
-                question: "7. O que significa a sigla ILPF aplicada ao campo sustentável?",
-                options: ["Irrigação Local por Proteção de Flores", "Integração Lavoura-Pecuária-Floresta", "Indústria de Lavouras e Produtos Frutíferos"],
-                correct: 1,
-                feedbackCorrect: "🎉 Incrível! A ILPF combina grãos, pasto e árvores no mesmo espaço, otimizando o solo e capturando carbono.",
-                feedbackWrong: "❌ Errado. Significa Integração Lavoura-Pecuária-Floresta."
-            },
-            {
-                question: "8. Qual a importância das Áreas de Preservação Permanente (APPs) nas fazendas rurais?",
-                options: ["Proteger recursos hídricos (como rios e nascentes) e reter a biodiversidade local", "Servir apenas para cercar e dividir propriedades", "Não possuem utilidade prática comprovada"],
-                correct: 0,
-                feedbackCorrect: "🎉 Perfeito! As APPs garantem que o ciclo da água continue funcionando e protegem animais polinizadores.",
-                feedbackWrong: "❌ Incorreto. Elas são essenciais para manter os recursos hídricos e as matas ciliares salvaguardadas."
-            },
-            {
-                question: "9. De que forma as abelhas e polinizadores se relacionam com o sucesso das lavouras?",
-                options: ["Elas prejudicam as folhas e reduzem a produção", "São fundamentais na polinização, garantindo alimentos melhores e sementes fortes", "Elas ajudam apenas na produção de mel, sem impacto nas plantas"],
-                correct: 1,
-                feedbackCorrect: "🎉 Certíssimo! A maior parte dos alimentos que consumimos depende diretamente do trabalho biológico dos polinizadores.",
-                feedbackWrong: "❌ Errado. Proteger os polinizadores garante maior vigor e sucesso na produtividade do campo."
-            },
-            {
-                question: "10. O que caracteriza a 'Economia Circular' aplicada ao agronegócio?",
-                options: ["Plantar lavouras apenas em círculos concêntricos", "Reaproveitar integralmente os resíduos (como esterco transformado em biogás e adubo), eliminando desperdícios", "Exportar produtos somente para países vizinhos"],
-                correct: 1,
-                feedbackCorrect: "🎉 Excelente! Na economia circular o resíduo de uma etapa vira energia limpa ou nutriente de outra, zerando desperdícios.",
-                feedbackWrong: "❌ Incorreto. Economia circular se baseia no reaproveitamento inteligente de subprodutos e resíduos orgânicos."
-            }
-        ];
-
-        let currentQuestionIndex = 0;
-        let score = 0;
-
-        let questionTextElement, optionsContainer, feedbackBox, nextButton, currentQuestionNumElement, scoreDisplayElement;
-
-        function initQuizElements() {
-            questionTextElement = document.getElementById('quiz-question-text');
-            optionsContainer = document.getElementById('quiz-options-container');
-            feedbackBox = document.getElementById('quiz-feedback-box');
-            nextButton = document.getElementById('next-btn');
-            currentQuestionNumElement = document.getElementById('current-question-num');
-            scoreDisplayElement = document.getElementById('score-display');
-        }
-
-        function loadQuestion() {
-            if(!questionTextElement) return;
-            
-            feedbackBox.style.display = "none";
-            nextButton.style.display = "none";
-            optionsContainer.innerHTML = "";
-            
-            if (currentQuestionIndex < quizData.length) {
-                const currentQuiz = quizData[currentQuestionIndex];
-                currentQuestionNumElement.innerText = `${currentQuestionIndex + 1}/${quizData.length}`;
-                questionTextElement.innerText = currentQuiz.question;
-
-                currentQuiz.options.forEach((option, index) => {
-                    const button = document.createElement('button');
-                    button.innerText = option;
-                    button.classList.add('quiz-btn');
-                    button.addEventListener('click', () => checkAnswer(index));
-                    optionsContainer.appendChild(button);
-          
+</body>
+</html>
